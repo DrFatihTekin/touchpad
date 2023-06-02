@@ -1,13 +1,17 @@
-keyboard.kbEvent(KeyValue.keyany, function () {
-    keyboard.setIndexColor(keyboard.keyBasic(), 0x0000ff)
-    keyboard.vibrationMotor(OnOff.ON)
-    basic.pause(100)
-    keyboard.ledBlank()
-    keyboard.vibrationMotor(OnOff.OFF)
-    basic.showString("" + (keyboard.keyBasic()))
-    basic.pause(500)
-    basic.clearScreen()
+let distance = 0
+keyboard.ServoRun(keyboard.aServos.S1, 0)
+basic.forever(function () {
+    if (distance < 3) {
+        keyboard.ServoRun(keyboard.aServos.S1, 70)
+        basic.pause(5000)
+        keyboard.ServoRun(keyboard.aServos.S1, 0)
+    }
 })
 basic.forever(function () {
-	
+    distance = sonar.ping(
+    DigitalPin.P0,
+    DigitalPin.P1,
+    PingUnit.Centimeters
+    )
+    basic.pause(1000)
 })

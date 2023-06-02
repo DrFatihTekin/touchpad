@@ -1,11 +1,12 @@
 {
-    "name": "touchpad",
+    "name": "robobin",
     "description": "",
     "dependencies": {
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "Math-Automatic": "github:DFRobot/pxt-Math-AUTOMATIC#08a6c84e26f36132f2946e6b681f7ea55f3e34cc"
+        "Math-Automatic": "github:DFRobot/pxt-Math-AUTOMATIC#08a6c84e26f36132f2946e6b681f7ea55f3e34cc",
+        "pxt-sonar": "github:microsoft/pxt-sonar#v0.0.5"
     },
     "files": [
         "main.blocks",
