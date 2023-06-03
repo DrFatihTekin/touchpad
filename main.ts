@@ -6,8 +6,8 @@ basic.forever(function () {
     DigitalPin.P1,
     PingUnit.Centimeters
     )
-    if (distance < 3) {
-        keyboard.ServoRun(keyboard.aServos.S1, 70)
+    if (distance < 10) {
+        keyboard.ServoRun(keyboard.aServos.S1, 40)
         basic.pause(5000)
         keyboard.ServoRun(keyboard.aServos.S1, 0)
     }
